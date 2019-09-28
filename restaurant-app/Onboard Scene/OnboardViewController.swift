@@ -102,6 +102,8 @@ class OnboardViewController: UIViewController, OnboardDisplayLogic {
       swiftyOnboard.goToPage(index: index, animated: true)
     } else {
       // TODO: request user location
+      self.interactor?.setOnboardFinished()
+      self.router?.routeToHomeViewController()
     }
   }
   
@@ -115,6 +117,8 @@ extension OnboardViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSource 
   func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
     let view = SwiftyOnboardPage()
     
+    // TODO: Add images to onboarding experience
+    
     view.title.font = UIFont(name: "HelveticaNeue-Medium", size: 28)
     view.subTitle.font = UIFont(name: "HelveticaNeue-Light", size: 20)
     
@@ -125,7 +129,7 @@ extension OnboardViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSource 
   }
   
   func swiftyOnboardBackgroundColorFor(_ swiftyOnboard: SwiftyOnboard, atIndex index: Int) -> UIColor? {
-    return #colorLiteral(red: 1, green: 0.4196078431, blue: 0.4196078431, alpha: 1)
+    return .foodyOrange
   }
   
   func swiftyOnboardViewForOverlay(_ swiftyOnboard: SwiftyOnboard) -> SwiftyOnboardOverlay? {

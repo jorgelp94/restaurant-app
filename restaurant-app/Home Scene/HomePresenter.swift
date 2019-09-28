@@ -1,5 +1,5 @@
 //
-//  OnboardWorker.swift
+//  HomePresenter.swift
 //  restaurant-app
 //
 //  Created by Jorge Luis Perales on 9/28/19.
@@ -12,13 +12,12 @@
 
 import UIKit
 
-class OnboardWorker {
+protocol HomePresentationLogic {
   
-  func onboardCompleted() -> Bool {
-    return SessionManager.getUserCompletedOnboard()
-  }
+}
+
+class HomePresenter: HomePresentationLogic {
+  weak var viewController: HomeDisplayLogic?
   
-  func completedOnboard() {
-    SessionManager.setUserCompletedOnboard(true)
-  }
+  // MARK: Do something
 }

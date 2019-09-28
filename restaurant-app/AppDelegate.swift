@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    self.loadViewController()
     return true
   }
 
@@ -41,6 +42,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
+  func loadViewController() {
+    if SessionManager.getUserCompletedOnboard() {
+      let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationViewController")
+      self.window = UIWindow(frame: UIScreen.main.bounds)
+      self.window?.rootViewController = homeVC
+      self.window?.makeKeyAndVisible()
+    } else {
+      let onboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardViewController")
+      self.window = UIWindow(frame: UIScreen.main.bounds)
+      self.window?.rootViewController = onboard
+      self.window?.makeKeyAndVisible()
+    }
+  }
 
 }
 

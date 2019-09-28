@@ -17,6 +17,20 @@
 		70B3E49E233FDFF9006F5642 /* OnboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E498233FDFF9006F5642 /* OnboardRouter.swift */; };
 		70B3E4A0233FDFFA006F5642 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E49A233FDFF9006F5642 /* OnboardViewController.swift */; };
 		70B3E4A1233FDFFA006F5642 /* OnboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E49B233FDFF9006F5642 /* OnboardInteractor.swift */; };
+		70B3E4A9233FEEF8006F5642 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4A3233FEEF8006F5642 /* HomePresenter.swift */; };
+		70B3E4AA233FEEF8006F5642 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4A4233FEEF8006F5642 /* HomeWorker.swift */; };
+		70B3E4AB233FEEF8006F5642 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4A5233FEEF8006F5642 /* HomeRouter.swift */; };
+		70B3E4AD233FEEF8006F5642 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4A7233FEEF8006F5642 /* HomeViewController.swift */; };
+		70B3E4AE233FEEF8006F5642 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4A8233FEEF8006F5642 /* HomeInteractor.swift */; };
+		70B3E4B1233FEFB3006F5642 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4B0233FEFB3006F5642 /* UIColor.swift */; };
+		70B3E4B5233FF887006F5642 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4B4233FF887006F5642 /* CollectionCell.swift */; };
+		70B3E4B7233FF9BD006F5642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4B6233FF9BD006F5642 /* Constants.swift */; };
+		70B3E4B9233FFA5C006F5642 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4B8233FFA5C006F5642 /* NetworkManager.swift */; };
+		70B3E4BB233FFCD0006F5642 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4BA233FFCD0006F5642 /* API.swift */; };
+		70B3E4BD233FFF72006F5642 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4BC233FFF72006F5642 /* NetworkStatus.swift */; };
+		70B3E4BF23400355006F5642 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4BE23400355006F5642 /* RequestManager.swift */; };
+		70B3E4C2234004B6006F5642 /* TypeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4C1234004B6006F5642 /* TypeRequest.swift */; };
+		70B3E4C423400C43006F5642 /* UIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4C323400C43006F5642 /* UIVIew.swift */; };
 		B4459584670AD6FC769C2962 /* Pods_restaurant_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B065B86F28F298ECBAE3989 /* Pods_restaurant_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +49,20 @@
 		70B3E498233FDFF9006F5642 /* OnboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardRouter.swift; sourceTree = "<group>"; };
 		70B3E49A233FDFF9006F5642 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		70B3E49B233FDFF9006F5642 /* OnboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardInteractor.swift; sourceTree = "<group>"; };
+		70B3E4A3233FEEF8006F5642 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		70B3E4A4233FEEF8006F5642 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		70B3E4A5233FEEF8006F5642 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		70B3E4A7233FEEF8006F5642 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70B3E4A8233FEEF8006F5642 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		70B3E4B0233FEFB3006F5642 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		70B3E4B4233FF887006F5642 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		70B3E4B6233FF9BD006F5642 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70B3E4B8233FFA5C006F5642 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		70B3E4BA233FFCD0006F5642 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		70B3E4BC233FFF72006F5642 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		70B3E4BE23400355006F5642 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		70B3E4C1234004B6006F5642 /* TypeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRequest.swift; sourceTree = "<group>"; };
+		70B3E4C323400C43006F5642 /* UIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIew.swift; sourceTree = "<group>"; };
 		D5111E0F8A508B6E1689147C /* Pods-restaurant-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restaurant-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-restaurant-app/Pods-restaurant-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,11 +118,15 @@
 			children = (
 				70B3E47C233FDA13006F5642 /* AppDelegate.swift */,
 				70B3E4A2233FE002006F5642 /* Onboard Scene */,
+				70B3E4AF233FEF04006F5642 /* Home Scene */,
 				70B3E493233FDDF5006F5642 /* Models */,
 				70B3E492233FDDDB006F5642 /* Networking */,
 				70B3E48F233FDD08006F5642 /* Utils */,
 				70B3E490233FDD23006F5642 /* Storyboards */,
+				70B3E4B2233FF84B006F5642 /* Modules */,
 				70B3E491233FDD9F006F5642 /* Resources */,
+				70B3E4C023400484006F5642 /* Enums */,
+				70B3E4C523400C48006F5642 /* Extensions */,
 			);
 			path = "restaurant-app";
 			sourceTree = "<group>";
@@ -103,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				70B3E494233FDE1E006F5642 /* SessionManager.swift */,
+				70B3E4B6233FF9BD006F5642 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -128,6 +161,10 @@
 		70B3E492233FDDDB006F5642 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				70B3E4BA233FFCD0006F5642 /* API.swift */,
+				70B3E4B8233FFA5C006F5642 /* NetworkManager.swift */,
+				70B3E4BC233FFF72006F5642 /* NetworkStatus.swift */,
+				70B3E4BE23400355006F5642 /* RequestManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -149,6 +186,51 @@
 				70B3E49B233FDFF9006F5642 /* OnboardInteractor.swift */,
 			);
 			path = "Onboard Scene";
+			sourceTree = "<group>";
+		};
+		70B3E4AF233FEF04006F5642 /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				70B3E4A3233FEEF8006F5642 /* HomePresenter.swift */,
+				70B3E4A4233FEEF8006F5642 /* HomeWorker.swift */,
+				70B3E4A5233FEEF8006F5642 /* HomeRouter.swift */,
+				70B3E4A7233FEEF8006F5642 /* HomeViewController.swift */,
+				70B3E4A8233FEEF8006F5642 /* HomeInteractor.swift */,
+			);
+			path = "Home Scene";
+			sourceTree = "<group>";
+		};
+		70B3E4B2233FF84B006F5642 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				70B3E4B3233FF863006F5642 /* Cells */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		70B3E4B3233FF863006F5642 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70B3E4B4233FF887006F5642 /* CollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		70B3E4C023400484006F5642 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				70B3E4C1234004B6006F5642 /* TypeRequest.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		70B3E4C523400C48006F5642 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70B3E4C323400C43006F5642 /* UIVIew.swift */,
+				70B3E4B0233FEFB3006F5642 /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,13 +359,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B3E4C423400C43006F5642 /* UIVIew.swift in Sources */,
 				70B3E47D233FDA13006F5642 /* AppDelegate.swift in Sources */,
+				70B3E4B1233FEFB3006F5642 /* UIColor.swift in Sources */,
+				70B3E4AA233FEEF8006F5642 /* HomeWorker.swift in Sources */,
 				70B3E4A0233FDFFA006F5642 /* OnboardViewController.swift in Sources */,
+				70B3E4B9233FFA5C006F5642 /* NetworkManager.swift in Sources */,
 				70B3E4A1233FDFFA006F5642 /* OnboardInteractor.swift in Sources */,
+				70B3E4BF23400355006F5642 /* RequestManager.swift in Sources */,
+				70B3E4B7233FF9BD006F5642 /* Constants.swift in Sources */,
 				70B3E49D233FDFF9006F5642 /* OnboardWorker.swift in Sources */,
 				70B3E49C233FDFF9006F5642 /* OnboardPresenter.swift in Sources */,
 				70B3E49E233FDFF9006F5642 /* OnboardRouter.swift in Sources */,
+				70B3E4BD233FFF72006F5642 /* NetworkStatus.swift in Sources */,
+				70B3E4AE233FEEF8006F5642 /* HomeInteractor.swift in Sources */,
 				70B3E495233FDE1E006F5642 /* SessionManager.swift in Sources */,
+				70B3E4A9233FEEF8006F5642 /* HomePresenter.swift in Sources */,
+				70B3E4C2234004B6006F5642 /* TypeRequest.swift in Sources */,
+				70B3E4B5233FF887006F5642 /* CollectionCell.swift in Sources */,
+				70B3E4AB233FEEF8006F5642 /* HomeRouter.swift in Sources */,
+				70B3E4BB233FFCD0006F5642 /* API.swift in Sources */,
+				70B3E4AD233FEEF8006F5642 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HXT9ZSCM9;
 				INFOPLIST_FILE = "$(SRCROOT)/restaurant-app/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HXT9ZSCM9;
 				INFOPLIST_FILE = "$(SRCROOT)/restaurant-app/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

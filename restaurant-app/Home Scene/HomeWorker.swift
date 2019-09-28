@@ -1,5 +1,5 @@
 //
-//  OnboardWorker.swift
+//  HomeWorker.swift
 //  restaurant-app
 //
 //  Created by Jorge Luis Perales on 9/28/19.
@@ -12,13 +12,6 @@
 
 import UIKit
 
-class OnboardWorker {
+class HomeWorker {
   
-  func onboardCompleted() -> Bool {
-    return SessionManager.getUserCompletedOnboard()
-  }
-  
-  func completedOnboard() {
-    SessionManager.setUserCompletedOnboard(true)
-  }
 }

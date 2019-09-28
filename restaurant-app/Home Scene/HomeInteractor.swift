@@ -1,5 +1,5 @@
 //
-//  OnboardInteractor.swift
+//  HomeInteractor.swift
 //  restaurant-app
 //
 //  Created by Jorge Luis Perales on 9/28/19.
@@ -12,21 +12,18 @@
 
 import UIKit
 
-protocol OnboardBusinessLogic {
-  func setOnboardFinished()
+protocol HomeBusinessLogic {
+  
 }
 
-protocol OnboardDataStore {
+protocol HomeDataStore {
   //var name: String { get set }
 }
 
-class OnboardInteractor: OnboardBusinessLogic, OnboardDataStore {
-  var presenter: OnboardPresentationLogic?
-  var worker =  OnboardWorker()
+class HomeInteractor: HomeBusinessLogic, HomeDataStore {
+  var presenter: HomePresentationLogic?
+  var worker: HomeWorker?
+  //var name: String = ""
   
-  // MARK: OnboardBusinessLogic
-  
-  func setOnboardFinished() {
-    worker.completedOnboard()
-  }
+  // MARK: HomeBusinessLogic
 }
