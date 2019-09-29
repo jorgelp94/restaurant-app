@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+enum SearchType: String {
+  case city = "city"
+  case selection = "selection"
+  case restaurant = "restaurant"
+}

@@ -11,35 +11,41 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-protocol SearchDisplayLogic: class
-{
-  func displaySomething(viewModel: Search.Something.ViewModel)
+protocol SearchDisplayLogic: class {
+  func displayCities(_ cities: [City])
+  func displayError(_ title: String, _ message: String)
+  func displayActivityIndicator(_ show: Bool)
+  func displayHomeViewController()
 }
 
-class SearchViewController: UIViewController, SearchDisplayLogic
-{
+class SearchViewController: UIViewController, SearchDisplayLogic {
   var interactor: SearchBusinessLogic?
   var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
-
+  
+  @IBOutlet weak var tableView: UITableView!
+  
+  let searchController = UISearchController(searchResultsController: nil)
+  var cities = [City]()
+  var activityData = ActivityData()
+  var type: SearchType?
+  
   // MARK: Object lifecycle
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     setup()
   }
   
-  required init?(coder aDecoder: NSCoder)
-  {
+  required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
   
   // MARK: Setup
   
-  private func setup()
-  {
+  private func setup() {
     let viewController = self
     let interactor = SearchInteractor()
     let presenter = SearchPresenter()
@@ -54,8 +60,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic
   
   // MARK: Routing
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let scene = segue.identifier {
       let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
       if let router = router, router.responds(to: selector) {
@@ -66,24 +71,120 @@ class SearchViewController: UIViewController, SearchDisplayLogic
   
   // MARK: View lifecycle
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
-    doSomething()
+    if self.type! != .selection {
+      configureSearchController()
+    }
+    
+    configureNavBar()
+    configureActivityIndicator()
   }
   
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = Search.Something.Request()
-    interactor?.doSomething(request: request)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    configureTableView()
+    
+    if cities.count > 0 {
+      self.tableView.reloadData()
+    }
   }
   
-  func displaySomething(viewModel: Search.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+  
+  func configureNavBar() {
+    self.navigationItem.largeTitleDisplayMode = .never
+    if self.type! == .selection {
+      self.title = "Select City"
+    } else {
+      self.title = "Search"
+      self.navigationItem.hidesBackButton = true
+    }
+    navigationItem.hidesSearchBarWhenScrolling = false
+    self.navigationController?.navigationBar.tintColor = .white
+  }
+  
+  func configureSearchController() {
+    self.searchController.searchResultsUpdater = self
+    self.searchController.obscuresBackgroundDuringPresentation = false
+    self.searchController.searchBar.placeholder = "Search"
+    self.searchController.searchBar.delegate = self
+    self.searchController.searchBar.sizeToFit()
+    navigationItem.searchController = self.searchController
+  }
+  
+  func configureTableView() {
+    self.tableView.delegate = self
+    self.tableView.dataSource = self
+  }
+  
+  func configureActivityIndicator() {
+    activityData = ActivityData(size: CGSize(width: 75, height: 75), message: nil, messageFont: nil, messageSpacing: nil, type: .ballPulse, color: .white, padding: 10, displayTimeThreshold: nil, minimumDisplayTime: 3, backgroundColor: nil, textColor: nil)
+  }
+  
+  // MARK: SearchDisplayLogic
+  
+  func displayCities(_ cities: [City]) {
+    self.cities = cities
+    self.tableView.reloadData()
+  }
+  
+  func displayError(_ title: String, _ message: String) {
+    Alert.errorAlert(view: self, title: title, message: message)
+  }
+  
+  func displayActivityIndicator(_ show: Bool) {
+    if show {
+      NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+    } else {
+      NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    }
+  }
+  
+  func displayHomeViewController() {
+    router?.routeToHomeViewController()
+  }
+  
+}
+
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.cities.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "cityResultCell", for: indexPath) as? CityResultCell {
+      cell.configure(self.cities[indexPath.row])
+      return cell
+    } else {
+      return UITableViewCell()
+    }
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 68
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let city = self.cities[indexPath.row]
+    self.interactor?.verifySelection("\(city.id)")
+  }
+}
+
+extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
+  func updateSearchResults(for searchController: UISearchController) {
+    // TODO:
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    if let search = searchBar.text {
+      interactor?.getCities(search: search)
+    }
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.text = ""
   }
 }

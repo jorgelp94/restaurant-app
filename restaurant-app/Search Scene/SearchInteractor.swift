@@ -12,30 +12,37 @@
 
 import UIKit
 
-protocol SearchBusinessLogic
-{
-  func doSomething(request: Search.Something.Request)
+protocol SearchBusinessLogic {
+  func getCities(search: String)
+  func verifySelection(_ id: String)
 }
 
-protocol SearchDataStore
-{
+protocol SearchDataStore {
   //var name: String { get set }
 }
 
-class SearchInteractor: SearchBusinessLogic, SearchDataStore
-{
+class SearchInteractor: SearchBusinessLogic, SearchDataStore {
   var presenter: SearchPresentationLogic?
-  var worker: SearchWorker?
+  var worker = SearchWorker()
   //var name: String = ""
   
-  // MARK: Do something
+  // MARK: SearchBusinessLogic
   
-  func doSomething(request: Search.Something.Request)
-  {
-    worker = SearchWorker()
-    worker?.doSomeWork()
-    
-    let response = Search.Something.Response()
-    presenter?.presentSomething(response: response)
+  func getCities(search: String) {
+    self.presenter?.presentActivityIndicator(true)
+    worker.getCity(search) { (data, error) in
+      self.presenter?.presentActivityIndicator(false)
+      if error == nil  {
+        guard let cities = data as? [City] else { return }
+        self.presenter?.presentCities(cities)
+      } else {
+        self.presenter?.presentError("Error", error!.localizedDescription)
+      }
+    }
+  }
+  
+  func verifySelection(_ id: String) {
+    worker.setCityId(id)
+    presenter?.presentHomeViewController()
   }
 }

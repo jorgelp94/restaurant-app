@@ -29,7 +29,7 @@ class OnboardRouter: NSObject, OnboardRoutingLogic, OnboardDataPassing {
   func routeToHomeViewController() {
     let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationViewController")
     guard let window = UIApplication.shared.keyWindow else { return }
-    UIView.transition(with: window, duration: 0.7, options: .showHideTransitionViews, animations: {
+    UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: {
       window.rootViewController = homeVC
     }) { (compelted) in
       // something here

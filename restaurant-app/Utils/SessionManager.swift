@@ -27,4 +27,12 @@ final class SessionManager {
   static func getUserCompletedOnboard() -> Bool {
     return self.userDefaults.bool(forKey: "completed_onboard")
   }
+  
+  static func setCityId(_ id: String) {
+    self.userDefaults.set(id, forKey: "city_id")
+  }
+  
+  static func getCityId() -> String? {
+    return self.userDefaults.string(forKey: "city_id")
+  }
 }

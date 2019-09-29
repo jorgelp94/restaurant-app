@@ -13,11 +13,25 @@
 import UIKit
 
 protocol HomePresentationLogic {
-  
+  func presentActivityIndicator(_ show: Bool)
+  func presentCities(_ cities: [City])
+  func presentError(_ title: String, _ message: String)
 }
 
 class HomePresenter: HomePresentationLogic {
   weak var viewController: HomeDisplayLogic?
   
-  // MARK: Do something
+  // MARK: HomePresentationLogic
+  
+  func presentActivityIndicator(_ show: Bool) {
+    viewController?.displayActivityIndicator(show)
+  }
+  
+  func presentCities(_ cities: [City]) {
+    viewController?.displayCities(cities)
+  }
+  
+  func presentError(_ title: String, _ message: String) {
+    viewController?.displayError(title, message)
+  }
 }

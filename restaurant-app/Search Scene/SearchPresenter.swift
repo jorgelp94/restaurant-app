@@ -12,20 +12,31 @@
 
 import UIKit
 
-protocol SearchPresentationLogic
-{
-  func presentSomething(response: Search.Something.Response)
+protocol SearchPresentationLogic {
+  func presentCities(_ cities: [City])
+  func presentError(_ title: String, _ message: String)
+  func presentActivityIndicator(_ show: Bool)
+  func presentHomeViewController()
 }
 
-class SearchPresenter: SearchPresentationLogic
-{
+class SearchPresenter: SearchPresentationLogic {
   weak var viewController: SearchDisplayLogic?
   
-  // MARK: Do something
+  // MARK: SearchPresentationLogic
   
-  func presentSomething(response: Search.Something.Response)
-  {
-    let viewModel = Search.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+  func presentCities(_ cities: [City]) {
+    viewController?.displayCities(cities)
+  }
+  
+  func presentError(_ title: String, _ message: String) {
+    viewController?.displayError(title, message)
+  }
+  
+  func presentActivityIndicator(_ show: Bool) {
+    viewController?.displayActivityIndicator(show)
+  }
+  
+  func presentHomeViewController() {
+    viewController?.displayHomeViewController()
   }
 }

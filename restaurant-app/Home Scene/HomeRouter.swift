@@ -13,7 +13,8 @@
 import UIKit
 
 @objc protocol HomeRoutingLogic {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+  func routeToSearchController()
+  func routeToCitySelection(_ cities: [Any])
 }
 
 protocol HomeDataPassing {
@@ -26,4 +27,20 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
   
   // MARK: Routing
   
+  func routeToSearchController() {
+    if let searchVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+      searchVC.type = .city
+      viewController?.navigationController?.pushViewController(searchVC, animated: true)
+    }
+  }
+  
+  func routeToCitySelection(_ cities: [Any]) {
+    if let searchVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+      searchVC.type = .selection
+      if let cities = cities as? [City] {
+        searchVC.cities = cities
+      }
+      viewController?.navigationController?.pushViewController(searchVC, animated: true)
+    }
+  }
 }

@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 final class RequestManager {
-  static let sharedinstance = RequestManager()
+  
+  static let sharedInstance = RequestManager()
   
   func makeRequest(params: [String: Any]?,
                    type: TypeRequest,
@@ -23,11 +25,22 @@ final class RequestManager {
     }
   }
   
-  func getCity(params: [String: Any]?, completionHandler: @escaping (String?, Error?) -> Void) {
+  func getCity(params: [String: Any]?, completionHandler: @escaping ([City]?, Error?) -> Void) {
     let url = Endpoints.Cities.fetch.url
     NetworkManager.requestGET(host: url, params: params) { (data, error) in
-      print(data)
-      print(error)
+      if let data = data {
+        let response = JSON(data)
+        do {
+          if let suggestions = try? response["location_suggestions"].rawData() {
+            let cities = try JSONDecoder().decode([City].self, from: suggestions)
+            completionHandler(cities, nil)
+          }
+        } catch (let error) {
+          completionHandler(nil, error)
+        }
+      } else {
+        completionHandler(nil, error)
+      }
     }
   }
 }

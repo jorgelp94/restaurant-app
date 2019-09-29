@@ -12,9 +12,22 @@
 
 import UIKit
 
-class SearchWorker
-{
-  func doSomeWork()
-  {
+class SearchWorker {
+  let requestManager = RequestManager.sharedInstance
+  let networkStatus = NetworkStatus.sharedInstance
+  
+  func getCity(_ q: String, completionHandler: @escaping (Any?, Error?) -> Void) {
+    let params = ["q": q] as [String : Any]
+    if networkStatus.isOnline {
+      requestManager.makeRequest(params: params, type: .city) { (data, error) in
+        completionHandler(data, error)
+      }
+    } else {
+      
+    }
+  }
+  
+  func setCityId(_ id: String) {
+    SessionManager.setCityId(id)
   }
 }

@@ -13,7 +13,9 @@
 import UIKit
 
 protocol HomeBusinessLogic {
-  
+  func getCity(lat: Double, lon: Double, city: String)
+  func verifySupportedCountry(_ country: String) -> Bool
+  func getLocalCityId() -> String?
 }
 
 protocol HomeDataStore {
@@ -22,8 +24,29 @@ protocol HomeDataStore {
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
   var presenter: HomePresentationLogic?
-  var worker: HomeWorker?
+  var worker = HomeWorker()
   //var name: String = ""
   
   // MARK: HomeBusinessLogic
+  
+  func getCity(lat: Double, lon: Double, city: String) {
+    self.presenter?.presentActivityIndicator(true)
+    worker.getCity(lat, lon, city) { (data, error) in
+      self.presenter?.presentActivityIndicator(false)
+      if error == nil  {
+        guard let cities = data as? [City] else { return }
+        self.presenter?.presentCities(cities)
+      } else {
+        self.presenter?.presentError("Error", error!.localizedDescription)
+      }
+    }
+  }
+  
+  func verifySupportedCountry(_ country: String) -> Bool {
+    return worker.isCountrySupported(country)
+  }
+  
+  func getLocalCityId() -> String? {
+    return worker.getCityId() != "" ? worker.getCityId() : nil
+  }
 }

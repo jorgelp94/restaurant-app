@@ -9,4 +9,6 @@ target 'restaurant-app' do
  pod 'SwiftyJSON'
  pod 'AlamofireImage'
  pod 'SwiftyOnboard'
+ pod 'Wormholy', :configurations => ['Debug']
+ pod 'NVActivityIndicatorView'
 end
