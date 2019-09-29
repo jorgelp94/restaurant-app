@@ -40,6 +40,7 @@
 		70B3E4D6234109B5006F5642 /* CityResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4D5234109B5006F5642 /* CityResultCell.swift */; };
 		70B3E4D823410CD8006F5642 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4D723410CD8006F5642 /* City.swift */; };
 		70B3E4DA23415456006F5642 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4D923415456006F5642 /* SearchType.swift */; };
+		70B3E4DC23416113006F5642 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B3E4DB23416113006F5642 /* Collection.swift */; };
 		B4459584670AD6FC769C2962 /* Pods_restaurant_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B065B86F28F298ECBAE3989 /* Pods_restaurant_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		70B3E4D5234109B5006F5642 /* CityResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResultCell.swift; sourceTree = "<group>"; };
 		70B3E4D723410CD8006F5642 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		70B3E4D923415456006F5642 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
+		70B3E4DB23416113006F5642 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		D5111E0F8A508B6E1689147C /* Pods-restaurant-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restaurant-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-restaurant-app/Pods-restaurant-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				70B3E4D723410CD8006F5642 /* City.swift */,
+				70B3E4DB23416113006F5642 /* Collection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				70B3E4D3234106D6006F5642 /* SearchInteractor.swift in Sources */,
 				70B3E4D6234109B5006F5642 /* CityResultCell.swift in Sources */,
 				70B3E4AA233FEEF8006F5642 /* HomeWorker.swift in Sources */,
+				70B3E4DC23416113006F5642 /* Collection.swift in Sources */,
 				70B3E4CF234106D6006F5642 /* SearchWorker.swift in Sources */,
 				70B3E4A0233FDFFA006F5642 /* OnboardViewController.swift in Sources */,
 				70B3E4B9233FFA5C006F5642 /* NetworkManager.swift in Sources */,

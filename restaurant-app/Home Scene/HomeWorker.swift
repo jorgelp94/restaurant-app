@@ -27,6 +27,15 @@ class HomeWorker {
     }
   }
   
+  func getCollections(completionHandler: @escaping (Any?, Error?) -> Void) {
+    let params = ["city_id": SessionManager.getCityId()!, "count": 10] as [String : Any]
+    if networkStatus.isOnline {
+      requestManager.makeRequest(params: params, type: .collections) { (data, error) in
+        completionHandler(data, error)
+      }
+    }
+  }
+  
   func isCountrySupported(_ country: String) -> Bool {
     // Hard coded supported countries from Zomato
     let supported = [

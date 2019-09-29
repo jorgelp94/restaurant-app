@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "restaurant-app/Home Scene/HomeInteractor.swift"
-            timestampString = "591487032.909323"
+            timestampString = "591488878.823743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "getCity(lat:lon:city:)"
             landmarkType = "7">
             <Locations>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "restaurant-app/Home Scene/HomeWorker.swift"
-            timestampString = "591487032.909384"
+            timestampString = "591488878.8238961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"

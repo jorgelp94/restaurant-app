@@ -16,6 +16,7 @@ protocol HomePresentationLogic {
   func presentActivityIndicator(_ show: Bool)
   func presentCities(_ cities: [City])
   func presentError(_ title: String, _ message: String)
+  func presentCollections(_ collections: [Collection])
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -33,5 +34,9 @@ class HomePresenter: HomePresentationLogic {
   
   func presentError(_ title: String, _ message: String) {
     viewController?.displayError(title, message)
+  }
+  
+  func presentCollections(_ collections: [Collection]) {
+    viewController?.displayCollections(collections)
   }
 }

@@ -18,6 +18,7 @@ protocol HomeDisplayLogic: class {
   func displayActivityIndicator(_ show: Bool)
   func displayCities(_ cities: [City])
   func displayError(_ title: String, _ message: String)
+  func displayCollections(_ collections: [Collection])
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -28,6 +29,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
   
   let locationManager = CLLocationManager()
   var activityData = ActivityData()
+  var collections = [Collection]()
   
   // MARK: Object lifecycle
   
@@ -161,6 +163,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         if let savedCityId = self.interactor?.getLocalCityId() {
           // load collections
           // load restaurants
+          self.interactor?.getCollections()
         } else {
           if supported  {
             if let town = placemark?.locality {
@@ -184,6 +187,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     if let savedCityId = self.interactor?.getLocalCityId() {
       // load collections
       // load restaurants
+      self.interactor?.getCollections()
     } else {
       let title = "Select a city"
       let message = "You will need to select a city in order to give you nearby restaurants."
@@ -210,16 +214,21 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
   func displayError(_ title: String, _ message: String) {
     Alert.errorAlert(view: self, title: title, message: message)
   }
+  
+  func displayCollections(_ collections: [Collection]) {
+    self.collections = collections
+    self.collectionsCollectionView.reloadData()
+  }
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 15
+    return self.collections.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? CollectionCell {
-      cell.configure()
+      cell.configure(self.collections[indexPath.row])
       return cell
     } else {
       return UICollectionViewCell()

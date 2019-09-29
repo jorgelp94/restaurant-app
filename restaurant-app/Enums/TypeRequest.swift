@@ -10,4 +10,5 @@ import Foundation
 
 enum TypeRequest {
   case city
+  case collections
 }

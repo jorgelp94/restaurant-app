@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class CollectionCell: UICollectionViewCell {
     
@@ -15,10 +16,15 @@ class CollectionCell: UICollectionViewCell {
   @IBOutlet weak var overlayView: UIView!
   @IBOutlet weak var titleLabel: UILabel!
   
-  func configure() {
+  func configure(_ collection: Collection) {
     self.overlayView.backgroundColor = .black
     self.overlayView.roundedCorners(radius: 10)
     self.mainView.roundedCorners(radius: 10)
     self.collectionImageView.roundedCorners(radius: 10)
+    
+    titleLabel.text = collection.title
+    if let imageURL = URL(string: collection.imageUrl) {
+      self.collectionImageView.af_setImage(withURL: imageURL)
+    }
   }
 }

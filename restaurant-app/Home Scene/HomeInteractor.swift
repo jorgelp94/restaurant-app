@@ -16,6 +16,7 @@ protocol HomeBusinessLogic {
   func getCity(lat: Double, lon: Double, city: String)
   func verifySupportedCountry(_ country: String) -> Bool
   func getLocalCityId() -> String?
+  func getCollections()
 }
 
 protocol HomeDataStore {
@@ -48,5 +49,18 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
   
   func getLocalCityId() -> String? {
     return worker.getCityId() != "" ? worker.getCityId() : nil
+  }
+  
+  func getCollections() {
+    self.presenter?.presentActivityIndicator(true)
+    worker.getCollections { (data, error) in
+      self.presenter?.presentActivityIndicator(false)
+      if error == nil {
+        guard let collections = data as? [Collection] else { return }
+        self.presenter?.presentCollections(collections)
+      } else {
+        self.presenter?.presentError("Error", error!.localizedDescription)
+      }
+    }
   }
 }
