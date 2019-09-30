@@ -1,5 +1,5 @@
 //
-//  RestaurantListViewController.swift
+//  RestaurantDetailViewController.swift
 //  restaurant-app
 //
 //  Created by Jorge Luis Perales on 9/29/19.
@@ -11,23 +11,29 @@
 //
 
 import UIKit
+import Cosmos
 import NVActivityIndicatorView
 
-protocol RestaurantListDisplayLogic: class {
+protocol RestaurantDetailDisplayLogic: class {
   func displayActivityIndicator(_ show: Bool)
-  func displayRestaurants(_ restaurants: [Restaurant])
+  func displayReviews(_ reviews: [Review])
   func displayError(_ title: String, _ message: String)
 }
 
-class RestaurantListViewController: UIViewController, RestaurantListDisplayLogic {
-  var interactor: RestaurantListBusinessLogic?
-  var router: (NSObjectProtocol & RestaurantListRoutingLogic & RestaurantListDataPassing)?
+class RestaurantDetailViewController: UIViewController, RestaurantDetailDisplayLogic {
+  var interactor: RestaurantDetailBusinessLogic?
+  var router: (NSObjectProtocol & RestaurantDetailRoutingLogic & RestaurantDetailDataPassing)?
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var restaurantImageView: UIImageView!
+  @IBOutlet weak var ratingView: CosmosView!
+  @IBOutlet weak var reviewLabel: UILabel!
+  @IBOutlet weak var segmentControl: UISegmentedControl!
   
-  var restaurants = [Restaurant]()
+  var restaurant: Restaurant!
+  var reviews = [Review]()
   var activityData = ActivityData()
-  var collectionId: Int = 0
   
   // MARK: Object lifecycle
   
@@ -45,9 +51,9 @@ class RestaurantListViewController: UIViewController, RestaurantListDisplayLogic
   
   private func setup() {
     let viewController = self
-    let interactor = RestaurantListInteractor()
-    let presenter = RestaurantListPresenter()
-    let router = RestaurantListRouter()
+    let interactor = RestaurantDetailInteractor()
+    let presenter = RestaurantDetailPresenter()
+    let router = RestaurantDetailRouter()
     viewController.interactor = interactor
     viewController.router = router
     interactor.presenter = presenter
@@ -71,38 +77,42 @@ class RestaurantListViewController: UIViewController, RestaurantListDisplayLogic
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    configureTableView()
-    configureNavBar()
+    setupTableView()
+    setupNavBar()
     configureActivityIndicator()
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    
-    interactor?.getRestaurantsFromCollection(self.collectionId, 0)
+    interactor?.getReviews(restaurant.id)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.navigationController?.isNavigationBarHidden = false
-    self.navigationController?.navigationBar.isHidden = false
+    setupView()
   }
   
-  func configureTableView() {
+  func setupTableView() {
     self.tableView.dataSource = self
     self.tableView.delegate = self
   }
   
-  func configureNavBar() {
-    self.navigationController?.navigationBar.tintColor = .white
+  func setupNavBar() {
+    self.navigationController?.navigationBar.isHidden = true
+  }
+  
+  func setupView() {
+    self.segmentControl.tintColor = .foodyOrange
+    self.titleLabel.text = self.restaurant.name
+    self.restaurantImageView.af_setImage(withURL: URL(string: self.restaurant.thumb)!)
+    self.reviewLabel.text = self.restaurant.rating.text
+    self.reviewLabel.backgroundColor = self.restaurant.rating.color.toColor()
+    self.reviewLabel.roundedCorners(radius: 5)
+    self.ratingView.rating = Double(self.restaurant.rating.rating) as! Double
   }
   
   func configureActivityIndicator() {
     activityData = ActivityData(size: CGSize(width: 75, height: 75), message: nil, messageFont: nil, messageSpacing: nil, type: .ballPulse, color: .white, padding: 10, displayTimeThreshold: nil, minimumDisplayTime: 3, backgroundColor: nil, textColor: nil)
   }
   
-  // MARK: RestaurantListDisplayLogic
+  
+  // MARK: RestaurantDetailViewController
   
   func displayActivityIndicator(_ show: Bool) {
     if show {
@@ -112,24 +122,35 @@ class RestaurantListViewController: UIViewController, RestaurantListDisplayLogic
     }
   }
   
-  func displayRestaurants(_ restaurants: [Restaurant]) {
-    self.restaurants = restaurants
+  func displayReviews(_ reviews: [Review]) {
+    self.reviews = reviews
     self.tableView.reloadData()
   }
   
   func displayError(_ title: String, _ message: String) {
     Alert.errorAlert(view: self, title: title, message: message)
   }
+  
+  // MARK: IBActions
+  
+  @IBAction func backButtonPressed(_ sender: UIButton) {
+    router?.routeToRestaurantList()
+  }
+  
+  @IBAction func selectSegmentControl(_ sender: UISegmentedControl) {
+    
+  }
+  
 }
 
-extension RestaurantListViewController: UITableViewDataSource, UITableViewDelegate {
+extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.restaurants.count
+    return self.reviews.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as? RestaurantCell {
-      cell.configureCell(self.restaurants[indexPath.row])
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as? ReviewCell {
+      cell.configure(self.reviews[indexPath.row])
       return cell
     } else {
       return UITableViewCell()
@@ -137,11 +158,6 @@ extension RestaurantListViewController: UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 140
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let restaurant = self.restaurants[indexPath.row]
-    router?.routeToRestaurantDetail(restaurant)
+    return 234
   }
 }

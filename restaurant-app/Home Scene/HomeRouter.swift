@@ -16,6 +16,7 @@ import UIKit
   func routeToSearchController()
   func routeToCitySelection(_ cities: [Any])
   func routeToRestaurantListController(_ collectionId: Int, _ collectionName: String)
+  func routeToRestaurantDetail(_ restaurant: Any)
 }
 
 protocol HomeDataPassing {
@@ -50,6 +51,15 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
       restaurantVC.collectionId = collectionId
       restaurantVC.title = collectionName
       viewController?.navigationController?.pushViewController(restaurantVC, animated: true)
+    }
+  }
+  
+  func routeToRestaurantDetail(_ restaurant: Any) {
+    if let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RestaurantDetailViewController") as? RestaurantDetailViewController {
+      if let restaurant = restaurant as? Restaurant {
+        detailVC.restaurant = restaurant
+      }
+      viewController?.navigationController?.pushViewController(detailVC, animated: true)
     }
   }
 }

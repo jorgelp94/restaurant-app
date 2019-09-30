@@ -17,6 +17,7 @@ protocol HomePresentationLogic {
   func presentCities(_ cities: [City])
   func presentError(_ title: String, _ message: String)
   func presentCollections(_ collections: [Collection])
+  func presentRestaurants(_ restaurants: [Restaurant])
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -38,5 +39,9 @@ class HomePresenter: HomePresentationLogic {
   
   func presentCollections(_ collections: [Collection]) {
     viewController?.displayCollections(collections)
+  }
+  
+  func presentRestaurants(_ restaurants: [Restaurant]) {
+    viewController?.displayRestaurants(restaurants)
   }
 }

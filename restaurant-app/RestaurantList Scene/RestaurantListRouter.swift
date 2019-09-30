@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol RestaurantListRoutingLogic {
-  
+  func routeToRestaurantDetail(_ restaurant: Any)
 }
 
 protocol RestaurantListDataPassing {
@@ -26,4 +26,12 @@ class RestaurantListRouter: NSObject, RestaurantListRoutingLogic, RestaurantList
   
   // MARK: Routing
   
+  func routeToRestaurantDetail(_ restaurant: Any) {
+    if let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RestaurantDetailViewController") as? RestaurantDetailViewController {
+      if let restaurant = restaurant as? Restaurant {
+        detailVC.restaurant = restaurant
+      }
+      viewController?.navigationController?.pushViewController(detailVC, animated: true)
+    }
+  }
 }

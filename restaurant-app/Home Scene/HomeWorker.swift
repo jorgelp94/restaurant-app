@@ -36,6 +36,23 @@ class HomeWorker {
     }
   }
   
+  func getNearbyRestaurants(_ start: Int, completionHandler: @escaping (Any?, Error?) -> Void) {
+    let params = [
+      "entity_id": SessionManager.getCityId()!,
+      "entity_type": "city",
+      "count": 10,
+      "start": start,
+      "radius": 15
+      ] as [String : Any]
+    if networkStatus.isOnline {
+      requestManager.makeRequest(params: params, type: .nearby) { (data, error) in
+        completionHandler(data, error)
+      }
+    } else {
+      
+    }
+  }
+  
   func isCountrySupported(_ country: String) -> Bool {
     // Hard coded supported countries from Zomato
     let supported = [

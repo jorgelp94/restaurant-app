@@ -12,4 +12,6 @@ enum TypeRequest {
   case city
   case collections
   case restaurantCollections
+  case reviews
+  case nearby
 }

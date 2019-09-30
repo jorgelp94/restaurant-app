@@ -51,22 +51,6 @@ enum Endpoints {
     }
   }
   
-  enum Cuisines: Endpoint {
-    case fetch
-    
-    public var path: String {
-      switch self {
-      case .fetch: return "/cuisines"
-      }
-    }
-    
-    public var url: String {
-      switch self {
-      case .fetch: return "\(API.baseUrl)\(path)"
-      }
-    }
-  }
-  
   enum Restaurant: Endpoint {
     case fetch
     
@@ -83,12 +67,12 @@ enum Endpoints {
     }
   }
   
-  enum DailyMenu: Endpoint {
+  enum Reviews: Endpoint {
     case fetch
     
     public var path: String {
       switch self {
-      case .fetch: return "/dailymenu"
+      case .fetch: return "/reviews"
       }
     }
     

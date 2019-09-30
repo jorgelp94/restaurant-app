@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "restaurant-app/Home Scene/HomeInteractor.swift"
-            timestampString = "591497420.02284"
+            timestampString = "591513753.0984761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "getCity(lat:lon:city:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "restaurant-app/Home Scene/HomeWorker.swift"
-            timestampString = "591497420.0229681"
+            timestampString = "591513753.09857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -41,13 +41,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Networking/RequestManager.swift"
-            timestampString = "591497420.023029"
+            filePath = "restaurant-app/RestaurantDetail Scene/RestaurantDetailInteractor.swift"
+            timestampString = "591510827.8230571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "getRestaurantsFromCollection(params:completionHandler:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getReviews(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.RestaurantDetailInteractor.getReviews(Swift.String) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/RestaurantDetail%20Scene/RestaurantDetailInteractor.swift"
+                  timestampString = "591512059.797685"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in restaurant_app.RestaurantDetailInteractor.getReviews(Swift.String) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/RestaurantDetail%20Scene/RestaurantDetailInteractor.swift"
+                  timestampString = "591512059.8005821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/RestaurantDetail Scene/RestaurantDetailInteractor.swift"
+            timestampString = "591510827.823114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getReviews(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,14 +105,494 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Networking/RequestManager.swift"
-            timestampString = "591497420.023087"
+            filePath = "restaurant-app/RestaurantDetail Scene/RestaurantDetailWorker.swift"
+            timestampString = "591510827.823172"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "getRestaurantsFromCollection(params:completionHandler:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getReviews(_:completionHandler:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.RestaurantDetailWorker.getReviews(_: Swift.String, completionHandler: (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/RestaurantDetail%20Scene/RestaurantDetailWorker.swift"
+                  timestampString = "591512059.825658"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in restaurant_app.RestaurantDetailWorker.getReviews(_: Swift.String, completionHandler: (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/RestaurantDetail%20Scene/RestaurantDetailWorker.swift"
+                  timestampString = "591512059.828953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/RequestManager.swift"
+            timestampString = "591513753.098696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "getReviews(params:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.RequestManager.(getReviews in _819029BE916644BADBE2D8BBF47CEACA)(params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completionHandler: (Swift.Optional&lt;Swift.Array&lt;restaurant_app.Review&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Networking/RequestManager.swift"
+                  timestampString = "591512059.944541"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in restaurant_app.RequestManager.(getReviews in _819029BE916644BADBE2D8BBF47CEACA)(params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completionHandler: (Swift.Optional&lt;Swift.Array&lt;restaurant_app.Review&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Networking/RequestManager.swift"
+                  timestampString = "591512059.94776"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/RequestManager.swift"
+            timestampString = "591513753.098756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "getReviews(params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511098.426317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511098.426752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511098.427025"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in static restaurant_app.NetworkManager.requestGET(host: Swift.String, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Networking/NetworkManager.swift"
+                  timestampString = "591511867.543717"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in static restaurant_app.NetworkManager.requestGET(host: Swift.String, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Networking/NetworkManager.swift"
+                  timestampString = "591511867.545302"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511176.7077889"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511178.980963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511234.334301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Networking/NetworkManager.swift"
+            timestampString = "591511235.252483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "requestGET(host:params:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.693855"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Review.CodingKeys&gt;"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.091861"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.101058"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.6939321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Review.CodingKeys&gt;"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.124531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.693982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Review.CodingKeys&gt;"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.166531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.1745549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.694028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Review.CodingKeys&gt;"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.19705"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.2087311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.694073"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Review.CodingKeys&gt;"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.2308969"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "restaurant_app.Review.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "restaurant-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Review.swift"
+                  timestampString = "591512060.243531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.023139"
+            timestampString = "591513753.098956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -90,11 +618,11 @@
                   moduleName = "restaurant-app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496799.975014"
+                  timestampString = "591512060.29057"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
@@ -105,11 +633,11 @@
                   moduleName = "restaurant-app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496799.980145"
+                  timestampString = "591512060.3009681"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
                   offsetFromSymbolStart = "80">
                </Location>
             </Locations>
@@ -121,206 +649,158 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.023196"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.694723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "init(id:name:url:cuisines:thumb:timings:location:rating:)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(id:rating:text:date:user:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.023249"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.694772"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Restaurant.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.922536"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.924263"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(id:rating:text:date:user:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.023302"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.694821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Restaurant.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.931318"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.932961"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(id:rating:text:date:user:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.0233639"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.694867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Restaurant.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.937493"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "232">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.940806"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "188">
-               </Location>
-            </Locations>
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(id:rating:text:date:user:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.023416"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.69491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Restaurant.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.9487799"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "284">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496420.9504189"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "224">
-               </Location>
-            </Locations>
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "init(id:rating:text:date:user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.6949511"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "Review"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.6949919"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "Review"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.695032"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "Review"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.695073"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Review"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restaurant-app/Models/Review.swift"
+            timestampString = "591512058.695115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "Review"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -330,7 +810,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.023469"
+            timestampString = "591513753.099134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -346,11 +826,11 @@
                   moduleName = "restaurant-app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496800.052072"
+                  timestampString = "591512083.960474"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "388">
                </Location>
                <Location
@@ -361,300 +841,12 @@
                   moduleName = "restaurant-app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496800.056667"
+                  timestampString = "591512083.96322"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Restaurant.swift"
-            timestampString = "591497420.02352"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Restaurant.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496800.078164"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "388">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Restaurant.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Restaurant.swift"
-                  timestampString = "591496800.0814821"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Location.swift"
-            timestampString = "591497420.023572"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Location.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Location.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Location.swift"
-                  timestampString = "591496800.162678"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "440">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Location.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Location.swift"
-                  timestampString = "591496800.167016"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "332">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Location.swift"
-            timestampString = "591497420.023625"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Location.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Location.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Location.swift"
-                  timestampString = "591496800.17624"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "388">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Location.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Location.swift"
-                  timestampString = "591496800.179124"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Rating.swift"
-            timestampString = "591497420.023676"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Rating.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Rating.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Rating.swift"
-                  timestampString = "591496800.187362"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Rating.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Rating.swift"
-                  timestampString = "591496800.190392"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Rating.swift"
-            timestampString = "591497420.023724"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Rating.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Rating.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Rating.swift"
-                  timestampString = "591496820.311507"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Rating.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Rating.swift"
-                  timestampString = "591496820.31502"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "restaurant-app/Models/Rating.swift"
-            timestampString = "591497420.023769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "CodingKeys"
-            landmarkType = "13">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Rating.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;restaurant_app.Rating.CodingKeys&gt;"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Rating.swift"
-                  timestampString = "591496822.914107"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "restaurant_app.Rating.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "restaurant-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jorgeluisperales/Documents/Others/Rappi/restaurant-app/restaurant-app/Models/Rating.swift"
-                  timestampString = "591496822.91777"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "164">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -17,6 +17,7 @@ protocol HomeBusinessLogic {
   func verifySupportedCountry(_ country: String) -> Bool
   func getLocalCityId() -> String?
   func getCollections()
+  func getNearbyRestaurants(_ start: Int)
 }
 
 protocol HomeDataStore {
@@ -64,5 +65,16 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     }
   }
   
-  
+  func getNearbyRestaurants(_ start: Int) {
+    presenter?.presentActivityIndicator(true)
+    worker.getNearbyRestaurants(start) { (data, error) in
+      self.presenter?.presentActivityIndicator(false)
+      if error == nil {
+        guard let restaurants = data as? [Restaurant] else { return }
+        self.presenter?.presentRestaurants(restaurants)
+      } else {
+        self.presenter?.presentError("Error", error!.localizedDescription)
+      }
+    }
+  }
 }

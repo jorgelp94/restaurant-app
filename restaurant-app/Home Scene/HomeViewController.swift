@@ -19,6 +19,7 @@ protocol HomeDisplayLogic: class {
   func displayCities(_ cities: [City])
   func displayError(_ title: String, _ message: String)
   func displayCollections(_ collections: [Collection])
+  func displayRestaurants(_ restaurants: [Restaurant])
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -26,10 +27,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
   var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
 
   @IBOutlet weak var collectionsCollectionView: UICollectionView!
+  @IBOutlet weak var tableView: UITableView!
   
   let locationManager = CLLocationManager()
   var activityData = ActivityData()
   var collections = [Collection]()
+  var restaurants = [Restaurant]()
   
   // MARK: Object lifecycle
   
@@ -75,9 +78,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     super.viewDidLoad()
     
     self.locationManager.delegate = self
-    configureNavBar()
-    configureCollectionView()
-    configureActivityIndicator()
+    setupNavBar()
+    setupCollectionView()
+    setupActivityIndicator()
+    setupTableView()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -96,7 +100,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     return .lightContent
   }
   
-  func configureNavBar() {
+  func setupNavBar() {
     self.navigationController?.navigationBar.prefersLargeTitles = true
     self.navigationController?.navigationItem.largeTitleDisplayMode = .always
     self.navigationController?.navigationBar.tintColor = .white
@@ -107,17 +111,21 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     self.navigationController?.navigationBar.barTintColor = .foodyOrange
   }
   
-  func configureCollectionView() {
+  func setupCollectionView() {
     self.collectionsCollectionView.delegate = self
     self.collectionsCollectionView.dataSource = self
   }
   
-  func configureActivityIndicator() {
+  func setupTableView() {
+    self.tableView.dataSource = self
+    self.tableView.delegate = self
+  }
+  
+  func setupActivityIndicator() {
     activityData = ActivityData(size: CGSize(width: 75, height: 75), message: nil, messageFont: nil, messageSpacing: nil, type: .ballPulse, color: .white, padding: 10, displayTimeThreshold: nil, minimumDisplayTime: 3, backgroundColor: nil, textColor: nil)
   }
   
   func setupLocation() {
-    
     if CLLocationManager.locationServicesEnabled() {
       switch CLLocationManager.authorizationStatus() {
       case .notDetermined:
@@ -160,10 +168,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
           return
         }
         
-        if let savedCityId = self.interactor?.getLocalCityId() {
-          // load collections
-          // load restaurants
+        if let _ = self.interactor?.getLocalCityId() {
           self.interactor?.getCollections()
+          self.interactor?.getNearbyRestaurants(0)
         } else {
           if supported  {
             if let town = placemark?.locality {
@@ -184,10 +191,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
   }
   
   func handleLocationRestricted() {
-    if let savedCityId = self.interactor?.getLocalCityId() {
-      // load collections
-      // load restaurants
+    if let _ = self.interactor?.getLocalCityId() {
       self.interactor?.getCollections()
+      self.interactor?.getNearbyRestaurants(0)
     } else {
       let title = "Select a city"
       let message = "You will need to select a city in order to give you nearby restaurants."
@@ -219,6 +225,11 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     self.collections = collections
     self.collectionsCollectionView.reloadData()
   }
+  
+  func displayRestaurants(_ restaurants: [Restaurant]) {
+    self.restaurants = restaurants
+    self.tableView.reloadData()
+  }
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -240,6 +251,30 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     router?.routeToRestaurantListController(collection.id, collection.title)
   }
   
+}
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.restaurants.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as? RestaurantCell {
+      cell.configureCell(self.restaurants[indexPath.row])
+      return cell
+    } else {
+      return UITableViewCell()
+    }
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 140
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let restaurant = self.restaurants[indexPath.row]
+    router?.routeToRestaurantDetail(restaurant)
+  }
 }
 
 extension HomeViewController: CLLocationManagerDelegate {
