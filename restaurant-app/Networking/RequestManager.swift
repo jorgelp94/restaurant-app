@@ -25,6 +25,10 @@ final class RequestManager {
       self.getCollections(params: params) { (data, error) in
         completionHandler(data, error)
       }
+    case .restaurantCollections:
+      self.getRestaurantsFromCollection(params: params) { (data, error) in
+        completionHandler(data, error)
+      }
     default: break
     }
   }
@@ -61,6 +65,29 @@ final class RequestManager {
               collectionArray.append(item["collection"]!)
             }
             completionHandler(collectionArray, nil)
+          }
+        } catch (let error) {
+          completionHandler(nil, error)
+        }
+      } else {
+        completionHandler(nil, error)
+      }
+    }
+  }
+  
+  func getRestaurantsFromCollection(params: [String: Any]?, completionHandler: @escaping ([Restaurant]?, Error?) -> Void) {
+    let url = Endpoints.Search.fetch.url
+    NetworkManager.requestGET(host: url, params: params) { (data, error) in
+      if let data = data {
+        let response = JSON(data)
+        var restaurantArray = [Restaurant]()
+        do {
+          if let suggestions = try? response["restaurants"].rawData() {
+            let restaurants = try JSONDecoder().decode([[String: Restaurant]].self, from: suggestions)
+            for item in restaurants {
+              restaurantArray.append(item["restaurant"]!)
+            }
+            completionHandler(restaurantArray, nil)
           }
         } catch (let error) {
           completionHandler(nil, error)

@@ -11,4 +11,5 @@ target 'restaurant-app' do
  pod 'SwiftyOnboard'
  pod 'Wormholy', :configurations => ['Debug']
  pod 'NVActivityIndicatorView'
+ pod 'Cosmos', '~> 19.0'
 end

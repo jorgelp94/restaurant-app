@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2889DEF8A4251000858E8B206667B3B8"
+               BlueprintIdentifier = "2D51D7ECDE46FD8B91C0067ECB8D98A8"
                BuildableName = "Wormholy.bundle"
                BlueprintName = "Wormholy-Wormholy"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2889DEF8A4251000858E8B206667B3B8"
+            BlueprintIdentifier = "2D51D7ECDE46FD8B91C0067ECB8D98A8"
             BuildableName = "Wormholy.bundle"
             BlueprintName = "Wormholy-Wormholy"
             ReferencedContainer = "container:Pods.xcodeproj">

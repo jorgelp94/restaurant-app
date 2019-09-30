@@ -235,6 +235,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
   }
   
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let collection = self.collections[indexPath.row]
+    router?.routeToRestaurantListController(collection.id, collection.title)
+  }
+  
 }
 
 extension HomeViewController: CLLocationManagerDelegate {

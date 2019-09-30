@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.2)
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
+  - Cosmos (19.0.3)
   - NVActivityIndicatorView (4.7.0):
     - NVActivityIndicatorView/Presenter (= 4.7.0)
   - NVActivityIndicatorView/Presenter (4.7.0)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
+  - Cosmos (~> 19.0)
   - NVActivityIndicatorView
   - SwiftyJSON
   - SwiftyOnboard
@@ -20,6 +22,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - Cosmos
     - NVActivityIndicatorView
     - SwiftyJSON
     - SwiftyOnboard
@@ -28,11 +31,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
   Wormholy: f2488b9690976459a3ce6680ec099143724418d8
 
-PODFILE CHECKSUM: d1f1668b2ea0edf862d5d3d3429213d7711ab8e2
+PODFILE CHECKSUM: 85f210cf2a44250f56403ac5de3cbc151b3f56bf
 
 COCOAPODS: 1.5.3

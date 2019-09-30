@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16B790F098563B2530A35FA3638C7CAD"
-               BlueprintName = "Wormholy"
+               BlueprintIdentifier = "64A5B0D84D8579CF3E24DF2C12D99B08"
+               BlueprintName = "Cosmos"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Wormholy.framework">
+               BuildableName = "Cosmos.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
