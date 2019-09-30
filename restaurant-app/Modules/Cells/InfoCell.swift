@@ -10,6 +10,9 @@ import UIKit
 
 class InfoCell: UITableViewCell {
   
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var contentLabel: UILabel!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
@@ -21,8 +24,9 @@ class InfoCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
-  func configure(_ restaurant: Restaurant) {
-    
+  func configure(_ title: String, _ content: String) {
+    self.titleLabel.text = title
+    self.contentLabel.text = content
   }
   
 }

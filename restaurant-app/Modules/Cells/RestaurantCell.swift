@@ -39,8 +39,9 @@ class RestaurantCell: UITableViewCell {
     self.cuisinesLabel.text = restaurant.cuisines
     self.ratingLabel.text = restaurant.rating.text
     self.ratingView.rating = Double(restaurant.rating.rating) as! Double
-    
-    self.thumbImageView.af_setImage(withURL: URL(string: restaurant.thumb)!)
+    if restaurant.thumb != "" && restaurant.thumb != nil {
+      self.thumbImageView.af_setImage(withURL: URL(string: restaurant.thumb)!)
+    }
   }
   
 }

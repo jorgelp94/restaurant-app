@@ -138,26 +138,47 @@ class RestaurantDetailViewController: UIViewController, RestaurantDetailDisplayL
   }
   
   @IBAction func selectSegmentControl(_ sender: UISegmentedControl) {
-    
+    self.tableView.reloadData()
   }
   
 }
 
 extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.reviews.count
+    if self.segmentControl.selectedSegmentIndex == 0 {
+      return 2
+    } else {
+      return self.reviews.count
+    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as? ReviewCell {
-      cell.configure(self.reviews[indexPath.row])
-      return cell
+    if self.segmentControl.selectedSegmentIndex == 0 {
+      if let cell =  tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as? InfoCell {
+        if indexPath.row == 0 {
+          cell.configure("Address", self.restaurant.location.address)
+        } else {
+          cell.configure("Timings", self.restaurant.timings)
+        }
+        return cell
+      } else {
+        return UITableViewCell()
+      }
     } else {
-      return UITableViewCell()
+      if let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as? ReviewCell {
+        cell.configure(self.reviews[indexPath.row])
+        return cell
+      } else {
+        return UITableViewCell()
+      }
     }
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 234
+    if self.segmentControl.selectedSegmentIndex == 0 {
+      return 117
+    } else {
+      return 234
+    }
   }
 }

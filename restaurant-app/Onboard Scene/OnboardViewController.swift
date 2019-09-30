@@ -23,8 +23,8 @@ class OnboardViewController: UIViewController, OnboardDisplayLogic {
   
   var titleArray = [
     "Welcome to Foodie!",
-    "Search for any restaurant!",
-    "Find nearby places to eat!"
+    "Explore restaurants!",
+    "Find popular places to eat!"
   ]
   var subtitleArray = [
     "Foodie is your universal app that will help you find great food for every mood.",
